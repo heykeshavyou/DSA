@@ -7,8 +7,8 @@ int main()
     //**
     //***
     //****
-    int n = 4;
-    for (int i = 0; i < 4; i++)
+    int n = 5;
+    for (int i = 0; i < n; i++)
     {
         for (int j = 0; j <= i; j++)
         {
@@ -21,7 +21,7 @@ int main()
     //  2 2
     //  3 3 3
     //  4 4 4 4
-    for (int i = 1; i <= 4; i++)
+    for (int i = 1; i <= n; i++)
     {
         for (int j = 0; j < i; j++)
         {
@@ -34,7 +34,7 @@ int main()
     //  1 2
     //  1 2 3
     //  1 2 3 4
-    for (int i = 1; i <= 4; i++)
+    for (int i = 1; i <= n; i++)
     {
         for (int j = 0; j < i; j++)
         {
@@ -43,7 +43,7 @@ int main()
         cout << endl;
     }
     // Reverse Triangle
-    for (int i = 1; i <= 4; i++)
+    for (int i = 1; i <= n; i++)
     {
         int temp = i;
         while (temp != 0)
@@ -110,7 +110,7 @@ int main()
 
         for (int j = i; j > 0; j--)
         {
-            cout << " ";
+            cout << "  ";
         }
         if (i != 0)
         {
@@ -118,6 +118,48 @@ int main()
         }
 
         cout << endl;
+    }
+    for (int i = n - 2; i >= 0; i--)
+    {
+        for (int j = i; j < n; j++)
+        {
+            cout << " ";
+        }
+        cout<< "*";
+
+        for (int j = i; j > 0; j--)
+        {
+            cout << "  ";
+        }
+        if(i!=0){
+             cout << "*";
+        }
+        cout << endl;;
+    }
+    //Butterfly Pattern
+    for(int i=0;i<n;i++){
+        for(int j=0;j<=i;j++){
+            cout<<"*";
+        }
+        for(int j=n;j>i+1;j--){
+            cout<<"  ";
+        }
+         for(int j=0;j<=i;j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    for(int i=n;i>0;i--){
+        for(int j=0;j<i;j++){
+            cout<<"*";
+        }
+        for(int j=n;j>i;j--){
+            cout<<"  ";
+        }
+         for(int j=0;j<i;j++){
+            cout<<"*";
+        }
+        cout<<endl;
     }
     return 0;
 }
